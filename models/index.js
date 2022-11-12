@@ -11,14 +11,10 @@ Product.belongsTo(Category, {
 
 // Categories have many Products
 Category.hasMany(Product, {
-  foreignKey: 'category_id',
-  onDelete: 'CASCADE'
+  foreignKey: 'category_id'
 })
 
-//My thinking for the next could statements below, products will have may tags, so it will relate to the tags via the producttag. 
-//Then tags can be applied to multiple products so it will relate to the products thorugh the producttag
-
-// Products belongToMany Tags (through ProductTag) //Not sure this is right. Need to come back to it possibly. 
+// Products belongToMany Tags (through ProductTag)  
 Product.belongsToMany(Tag, {
   through: {
     model: ProductTag,
@@ -26,7 +22,7 @@ Product.belongsToMany(Tag, {
   },
 })
 
-// Tags belongToMany Products (through ProductTag) //Not sure this is right. Need to come back to it possibly.
+// Tags belongToMany Products (through ProductTag) 
 Tag.belongsToMany(Product, {
   through: {
     model: ProductTag,
