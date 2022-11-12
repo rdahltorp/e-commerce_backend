@@ -119,10 +119,10 @@ router.delete('/:id', async (req, res) => {
     })
     res.status(200).json(delProduct)
 
-    if (!delProd) {
+    if (!delProduct) {
       res.status(404).json({message: 'Sorry, it looks like that product doesnt exist. Please try again.'})
     }
-  } catch (error) {
+  } catch (err) {
     res.status(500).json(err)
   }
 });

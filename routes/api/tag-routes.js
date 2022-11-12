@@ -36,12 +36,8 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
   // create a new tag
   try {
-    const updateTag = await Tag.update(req.body, {
-      where: {
-        id: req.params.id
-      }
-    })
-    res.status(200).json(updateTag)
+    const newTag = await Tag.create(req.body)
+    res.status(200).json(newTag)
   } catch (err) {
     res.status(500).json(err)
   }
@@ -61,7 +57,7 @@ router.put('/:id', async (req, res) => {
     } else if (!req.body) {
       res.status(400).json({message: 'Looks like your update data is missing something. Please try again.'})
     }
-    res.status(200).json(updateCat)
+    res.status(200).json(updateTag)
   } catch (err) {
     res.status(500).json(err)
   }
