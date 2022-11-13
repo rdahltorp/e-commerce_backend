@@ -17,8 +17,9 @@ To test the routes I used Insomnia, but feel free to use Postman or any other RE
 
 To see the application in action, please see the gif below or click the link to watch the full walkthrough video.
 
-**ADD THE LINK AND GIF FOR THE WALK THROUGH** 
-    ![GIF demo of e-commerce backend application](assets/images/screenshot.png)
+Link to walkthrough: https://drive.google.com/file/d/1j904b5x1SGaFdxPjKa20xqJmqA2sbQcq/view?usp=sharing 
+
+   ![GIF demo of e-commerce backend application](./assets/images/e-commerce_backend_walkthrough.gif)
 
 
 ## Credits
